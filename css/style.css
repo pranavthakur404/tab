@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: burlywood;
+}
+
+.tab-wrap{
+    max-width: 50%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+}
+.tab-wrap input[type="radio"]{
+    display: none;
+    
+}
+.tab-wrap label{
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.tab-wrap .tab-content{
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    left: 0px;
+    display: none;
+}
+.tab-wrap [id^="tab"]:checked ~ label{
+    background:#FFFF;
+    color: #000;
+}
+.tab-wrap [id^="tab"]:checked ~ .tab-content{
+    display: block;
+}
